@@ -11,3 +11,8 @@ module "label" {
   namespace   = var.namespace
   stage       = var.stage
 }
+
+resource "google_compute_http_health_check" "rpc-hc" {
+  name = "rpc-health"
+  port = "5500"
+}

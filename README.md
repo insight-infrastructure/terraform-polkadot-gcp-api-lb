@@ -29,7 +29,9 @@ No issue is creating limit on this module.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| google | n/a |
 
 ## Inputs
 
