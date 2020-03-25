@@ -29,15 +29,27 @@ No issue is creating limit on this module.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| google | n/a |
+| google-beta | n/a |
 
 ## Inputs
 
-No input.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:-----:|
+| environment | The environment | `string` | `""` | no |
+| lb\_name | Name for load balancer | `string` | `"rpc-lb"` | no |
+| namespace | The namespace to deploy into | `string` | `""` | no |
+| network\_name | The network name, ie kusama / mainnet | `string` | `""` | no |
+| owner | n/a | `string` | `""` | no |
+| stage | The stage of the deployment | `string` | `""` | no |
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| target\_pool\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
