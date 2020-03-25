@@ -32,12 +32,14 @@ No issue is creating limit on this module.
 | Name | Version |
 |------|---------|
 | google | n/a |
+| google-beta | n/a |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | environment | The environment | `string` | `""` | no |
+| lb\_name | Name for load balancer | `string` | `"rpc-lb"` | no |
 | namespace | The namespace to deploy into | `string` | `""` | no |
 | network\_name | The network name, ie kusama / mainnet | `string` | `""` | no |
 | owner | n/a | `string` | `""` | no |

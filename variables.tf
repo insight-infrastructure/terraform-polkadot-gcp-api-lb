@@ -29,3 +29,13 @@ variable "owner" {
   type    = string
   default = ""
 }
+
+########
+# Load Balancer
+########
+
+variable "lb_name" {
+  description = "Name for load balancer"
+  type        = string
+  default     = "rpc-lb"
+}

@@ -22,3 +22,13 @@ resource "google_compute_target_pool" "this" {
 
   health_checks = [google_compute_http_health_check.rpc-hc.self_link]
 }
+
+resource "google_compute_forwarding_rule" "default" {
+  provider = google-beta
+
+  name                  = var.lb_name
+  target                = google_compute_target_pool.this.self_link
+  load_balancing_scheme = "EXTERNAL"
+  ip_protocol           = "TCP"
+  port_range            = "9933"
+}
