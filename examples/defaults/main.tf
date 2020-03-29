@@ -10,12 +10,12 @@ provider "google" {
 }
 
 module "network" {
-  source   = "github.com/insight-infrastructure/terraform-polkadot-gcp-network.git?ref=master"
+  source   = "github.com/insight-w3f/terraform-polkadot-gcp-network.git?ref=master"
   vpc_name = "cci-test"
 }
 
 module "asg" {
-  source                 = "github.com/insight-infrastructure/terraform-polkadot-gcp-asg.git?ref=master"
+  source                 = "github.com/insight-w3f/terraform-polkadot-gcp-asg.git?ref=master"
   node_name              = "sentry"
   relay_node_ip          = "1.2.3.4"
   relay_node_p2p_address = "abcdefg"
