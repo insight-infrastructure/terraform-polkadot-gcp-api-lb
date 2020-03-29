@@ -2,6 +2,8 @@
 
 [![open-issues](https://img.shields.io/github/issues-raw/insight-w3f/terraform-polkadot-gcp-api-lb?style=for-the-badge)](https://github.com/insight-w3f/terraform-polkadot-gcp-api-lb/issues)
 [![open-pr](https://img.shields.io/github/issues-pr-raw/insight-w3f/terraform-polkadot-gcp-api-lb?style=for-the-badge)](https://github.com/insight-w3f/terraform-polkadot-gcp-api-lb/pulls)
+[![build-status](https://img.shields.io/circleci/build/github/insight-w3f/terraform-polkadot-gcp-api-lb?style=for-the-badge)](https://circleci.com/gh/insight-w3f/terraform-polkadot-gcp-api-lb)
+
 
 ## Features
 
