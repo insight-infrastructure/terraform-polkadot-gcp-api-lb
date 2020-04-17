@@ -28,7 +28,6 @@ module "asg" {
   public_subnet_id       = module.network.public_subnets[0]
   public_key_path        = var.public_key_path
   use_lb                 = true
-  target_pool_id         = module.defaults.target_pool_id
 
   zone    = var.gcp_zone
   region  = var.gcp_region
