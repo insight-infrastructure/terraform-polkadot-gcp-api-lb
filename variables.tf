@@ -39,3 +39,26 @@ variable "lb_name" {
   type        = string
   default     = "rpc-lb"
 }
+
+variable "use_external_lb" {
+  description = "Bool to switch between public (true) or private (false)"
+  type        = bool
+  default     = false
+}
+
+variable "public_vpc_id" {
+  type = string
+}
+
+variable "public_subnet_id" {
+  type = string
+}
+
+variable "instance_group_id" {
+  type = string
+}
+
+variable "region" {
+  type    = string
+  default = "us-east1"
+}

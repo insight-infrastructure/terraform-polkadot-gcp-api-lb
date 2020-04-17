@@ -12,6 +12,8 @@ provider "google" {
 module "network" {
   source   = "github.com/insight-w3f/terraform-polkadot-gcp-network.git?ref=master"
   vpc_name = "cci-test"
+  project  = var.gcp_project
+  region   = var.gcp_region
 }
 
 module "asg" {
@@ -20,13 +22,12 @@ module "asg" {
   relay_node_ip          = "1.2.3.4"
   relay_node_p2p_address = "abcdefg"
   security_group_id      = module.network.sentry_security_group_id[0]
-  vpc_id                 = module.network.vpc_id
+  vpc_id                 = module.network.public_vpc_name
   network_name           = "dev"
   private_subnet_id      = module.network.private_subnets[0]
   public_subnet_id       = module.network.public_subnets[0]
   public_key_path        = var.public_key_path
-  use_lb                 = true
-  target_pool_id         = module.defaults.target_pool_id
+  use_external_lb        = false
 
   zone    = var.gcp_zone
   region  = var.gcp_region
@@ -34,5 +35,8 @@ module "asg" {
 }
 
 module "defaults" {
-  source = "../.."
+  source            = "../.."
+  instance_group_id = module.asg.instance_group_id
+  public_subnet_id  = module.network.public_subnets[0]
+  public_vpc_id     = module.network.public_vpc_name
 }
