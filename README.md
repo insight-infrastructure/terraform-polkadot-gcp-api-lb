@@ -53,6 +53,10 @@ module "asg" {
 No issue is creating limit on this module.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -63,18 +67,24 @@ No issue is creating limit on this module.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | environment | The environment | `string` | `""` | no |
+| instance\_group\_id | n/a | `string` | n/a | yes |
 | lb\_name | Name for load balancer | `string` | `"rpc-lb"` | no |
 | namespace | The namespace to deploy into | `string` | `""` | no |
 | network\_name | The network name, ie kusama / mainnet | `string` | `""` | no |
 | owner | n/a | `string` | `""` | no |
+| public\_subnet\_id | n/a | `string` | n/a | yes |
+| public\_vpc\_id | n/a | `string` | n/a | yes |
+| region | n/a | `string` | `"us-east1"` | no |
 | stage | The stage of the deployment | `string` | `""` | no |
+| use\_external\_lb | Bool to switch between public (true) or private (false) | `bool` | `false` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| internal\_lb\_endpoint | n/a |
 | target\_pool\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
